@@ -44,7 +44,9 @@ app.post('/', async (req, res) => {
 const server = app.listen(5000, () => {
   console.log(
     `Server is running on ${
-      server.address().address === '::' ? 'http://localhost:' : ''
+      server.address().address === '::'
+        ? 'http://localhost:'
+        : 'https://codex-5dg7.onrender.com'
     }${process.env.PORT || 5000} PORT`
   );
 });
